@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/search/:query/:collections">
+          <Route path="/search/:query/:collections?">
           <SearchResults />
           </Route>
           <Route path="/" exact>

@@ -15,10 +15,10 @@ function Search({alignment}) {
             <div className="select-wrapper">
                 <select className="text-input" value={collection} onChange={e => setCollection(e.target.value)} placeholder="Collections">
                     <option value="">Collections</option>
-                    <option value="9415206">Gaming</option>
+                    <option value="208403">Love</option>
                     <option value="3403106">Summer</option>
-                    <option value="uTzWHa7H0wE">Retro Cameras</option>
-                    <option value="12104482">Olympics</option>
+                    <option value="1424240">Animal</option>
+                    <option value="1597792">Women</option>
                 </select>
             </div>
             <button onClick={handleClick} className="primary-btn">SEARCH</button>
