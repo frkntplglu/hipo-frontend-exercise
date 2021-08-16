@@ -1,19 +1,26 @@
-import { useState } from 'react'
-import { useHistory } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { useHistory,useParams } from "react-router-dom"
 
 function Search({alignment}) {
-    const [query, setQuery] = useState("");
-    const [collection, setCollection] = useState("");
+    const {query, collections} = useParams();
+    const [queryState, setQueryState] = useState("");
+    const [collectionState, setCollectionState] = useState("");
     const history = useHistory();
     const handleClick = () => {
-        history.push(`/search/${query}/${collection}`)
+        history.push(`/search/${queryState}/${collectionState}`)
     }
+    useEffect(() => {
+        if(query || collections){
+            setQueryState(query)
+            setCollectionState(collections)
+        }
+    }, [])
 
     return (
         <div className={`search ${alignment}`}>
-            <input type="text" placeholder="Query" className="text-input" value={query} onChange={e => setQuery(e.target.value)} />
+            <input type="text" placeholder="Query" className="text-input" value={queryState} onChange={e => setQueryState(e.target.value)} />
             <div className="select-wrapper">
-                <select className="text-input" value={collection} onChange={e => setCollection(e.target.value)} placeholder="Collections">
+                <select className="text-input" value={collectionState} onChange={e => setCollectionState(e.target.value)} placeholder="Collections">
                     <option value="">Collections</option>
                     <option value="208403">Love</option>
                     <option value="3403106">Summer</option>
