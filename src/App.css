@@ -13,8 +13,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
   height: 100vh;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 .homepage h1{
@@ -34,7 +35,9 @@
   padding-left: 50px;
   padding-right: 50px;
 }
-
+.header .mobile-title{
+  display: none;
+}
 .search{
   max-width: 100%;
   display: flex;
@@ -110,9 +113,10 @@ select.text-input{
 
 .container{
   max-width: 100%;
-  width:940px;
+  width:970px;
   padding: 50px 15px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .photo-list{
@@ -170,4 +174,62 @@ select.text-input{
 }
 .no-result img{
   max-width:300px;
+}
+
+@media screen and (max-width:1280px){
+  .container{
+    padding:15px;
+  }
+  .header{
+    padding-left:15px;
+    padding-right:15px;
+    height:auto;
+    flex-wrap:wrap;
+    padding-top:15px;
+  }
+  .header .logo img{
+    height:60px;
+  }
+  .header .mobile-title{
+    display: block;
+    color:#fff;
+    font-weight: 100;
+    margin:0;
+  }
+  .header .mobile-title strong{
+    font-weight: 700;
+  }
+  .header .search.horizontal{
+    flex-direction: column;
+    width:100%;
+  }
+  .header .search.horizontal input,
+  .header .search.horizontal select,
+  .header .search.horizontal .select-wrapper{
+    margin-top:15px;
+    width:100%;
+    max-width:100%;
+  }
+  .header .search.horizontal select{
+    margin-top: 0;
+  }
+  .header .search.horizontal button{
+    width:100%;
+    margin-left:0;
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+}
+
+@media screen and (max-width:970px){
+  .photo-list{
+    column-count: 2;
+    column-gap: 15px;
+  }
+}
+
+@media screen and (max-width:480px){
+  .photo-list{
+    column-count: 1;
+  }
 }

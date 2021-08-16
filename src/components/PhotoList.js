@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Alert from './Alert';
 import Loader from './Loader';
 import NoResult from './NoResult';
