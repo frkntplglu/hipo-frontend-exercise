@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Search({alignment}) {
     return (
         <div className={`search ${alignment}`}>

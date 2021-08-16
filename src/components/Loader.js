@@ -1,4 +1,3 @@
-import React from 'react'
 import loader from '../images/loader.svg'
 
 function Loader() {
