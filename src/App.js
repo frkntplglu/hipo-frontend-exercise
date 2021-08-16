@@ -12,10 +12,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/search">
+          <Route path="/search/:query/:collections">
           <SearchResults />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             <Home />
           </Route>
         </Switch>        
