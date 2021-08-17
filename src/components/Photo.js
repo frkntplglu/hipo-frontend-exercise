@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
 import PhotoModal from './PhotoModal';
 
 function Photo(props) {
@@ -12,7 +11,7 @@ function Photo(props) {
     const handleModalClose = () => {
         setIsShown(false)
     }
-    const getPhotoById = async (e,id) => {
+    const showModal = async (e,id) => {
         e.preventDefault();
         console.log(id)
         setIsShown(true);
@@ -24,7 +23,7 @@ function Photo(props) {
             isShown ? <PhotoModal id={id} handleClose={handleModalClose} /> : null 
         }
         <div className="photo-box">
-            <a onClick={(e) => getPhotoById(e,id)}><img src={urls.regular} alt={alt_description} /></a>
+            <a href="#" onClick={(e) => showModal(e,id)}><img src={urls.regular} alt={alt_description} /></a>
         </div>
         </>
     )

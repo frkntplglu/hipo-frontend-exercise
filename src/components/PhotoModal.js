@@ -5,7 +5,6 @@ function PhotoModal(props) {
     const { id, handleClose } = props;
     const [photoDetail, setPhotoDetail] = useState({});
     useEffect(async () => {
-        console.log(id)
         const response = await fetch(`https://api.unsplash.com/photos/${id}`,{
             headers: {
                 'Authorization': 'Client-ID f6b8cbbf28ca721a4b7b2df3fbbc83abd9e2ba5672bb838b81dbbcf84d97fdfc', 
@@ -36,7 +35,6 @@ function PhotoModal(props) {
                             </div>
                             <a href={photoDetail.links.download} className="download-btn">Download</a>
                         </div>
-                        <div className="photo-map"></div>
                     </div>
                     : <Loader />
                 }

@@ -218,7 +218,6 @@ select.text-input{
   margin-top: 42px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 34px;
 }
 .user{
   display: flex;
@@ -259,11 +258,6 @@ a.download-btn{
   align-items: center;
 }
 
-.photo-map{
-  background-color: var(--gray);
-  height:260px;
-  border-radius:10px;
-}
 
 @media screen and (max-width:1280px){
   .container{
@@ -314,6 +308,24 @@ a.download-btn{
   .photo-list{
     column-count: 2;
     column-gap: 15px;
+  }
+  .photo-info{
+    flex-wrap:wrap;
+    margin-top:15px;
+  }
+  .user{
+    width:100%;
+  }
+  .user-firstname{
+    font-size:20px;
+  }
+  .username{
+    font-size: 14px;
+  }
+  a.download-btn{
+    margin-top:15px;
+    width:100%;
+    font-size:14px;
   }
 }
 
