@@ -1,0 +1,21 @@
+.photo-box {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  cursor: pointer;
+  button {
+    background: none;
+    border: none;
+    appearance: none;
+    grid-row: 1 / -1;
+    grid-column: 1;
+    padding: 0;
+    cursor: pointer;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}

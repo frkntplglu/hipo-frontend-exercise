@@ -1,15 +1,15 @@
-import Header from '../components/Header'
-import PhotoList from '../components/PhotoList'
+import Header from "../components/header/Header";
+import PhotoList from "../components/photolist/PhotoList";
 
 function SearchResults() {
-    return (
-        <>
-          <Header />  
-          <div className="container">
-            <PhotoList />
-          </div>
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <PhotoList />
+      </div>
+    </>
+  );
 }
 
-export default SearchResults
+export default SearchResults;
