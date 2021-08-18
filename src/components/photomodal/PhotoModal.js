@@ -9,8 +9,9 @@ import PropTypes from "prop-types";
 const modalRoot = document.getElementById("modal-root");
 
 function PhotoModal(props) {
-  const { isOpen, onClose, id } = props;
+  const { onClose, id } = props;
   const { data, error, isLoaded } = useFetch(`/photos/${id}`);
+  console.log(isLoaded);
   useEffect(() => {
     const handleEscapeClose = (e) => {
       if (e.keyCode === 27) {
@@ -22,8 +23,6 @@ function PhotoModal(props) {
       window.removeEventListener("keyup", handleEscapeClose, false);
     };
   }, [onClose]);
-
-  if (!isOpen) return null;
 
   return ReactDom.createPortal(
     <div className="modal-overlay">

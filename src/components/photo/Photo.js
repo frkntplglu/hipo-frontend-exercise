@@ -14,7 +14,7 @@ function Photo(props) {
   };
   return (
     <>
-      <PhotoModal isOpen={isOpen} onClose={handleModalClose} id={id} />
+      {isOpen ? <PhotoModal onClose={handleModalClose} id={id} /> : null}
       <div className="photo-box">
         <button onClick={showModal}>
           <img src={urls.regular} alt={alt_description} />
