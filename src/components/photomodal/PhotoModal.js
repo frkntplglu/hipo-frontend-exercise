@@ -27,7 +27,7 @@ function PhotoModal(props) {
   return ReactDom.createPortal(
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-btn" onClick={onClose}>
+        <button className="modal-close-btn" onClick={onClose}>
           X
         </button>
         {error ? (
@@ -51,7 +51,7 @@ function PhotoModal(props) {
                 </div>
                 <div className="user-info">
                   <div className="user-firstname">{data.user.name}</div>
-                  <div className="username">@{data.user.username}</div>
+                  <div className="user-name">@{data.user.username}</div>
                 </div>
               </div>
               <a href={data.links.download} className="download-btn">
